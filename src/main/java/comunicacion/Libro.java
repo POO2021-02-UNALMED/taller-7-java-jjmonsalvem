@@ -48,9 +48,21 @@ public class Libro extends Escrito{
         this.interpretacion = interpretacion;
     }
 
-
+    @Override
     public String interpretacion() {
-        return this.interpretacion;
+        return interpretacion;
+    }
+
+    @Override
+    int palabrasTotales(int palabrasPagina) {
+        // TODO Auto-generated method stub
+        return super.getPaginas()*palabrasPagina*2;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s", super.getOrigen(), super.getTitulo(), super.getAutor(), super.getPaginas(), co_autor, editorial, edicion);
     }
 
     

@@ -27,9 +27,21 @@ public class Fabula extends Escrito{
         this.interpretacion = interpretacion;
     }
 
-
+    @Override
     public String interpretacion() {
-        return this.interpretacion;
+        return interpretacion;
+    }
+
+    @Override
+    int palabrasTotales(int palabrasPagina) {
+        // TODO Auto-generated method stub
+        return super.getPaginas()*palabrasPagina*1;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return String.format("%s\n%s\n%s\n%s\n%s", super.getOrigen(), super.getTitulo(), super.getAutor(), super.getPaginas(), ensenanza);
     }
     
 }
